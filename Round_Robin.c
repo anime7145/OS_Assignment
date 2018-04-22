@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include<windows.h>
-#define MAXIMUM_QUEUE_SIZE 100
+#define MAX_QUEUE_SIZE 100
 
 
 typedef struct Processes {
@@ -10,14 +10,14 @@ typedef struct Processes {
 } Process;
 
 
-Process * queue[MAXIMUM_QUEUE_SIZE];
+Process * queue[MAX_QUEUE_SIZE];
 int front = 0, rear = -1, processed = 0, curr_time = 0, tq = 7;
 int last_front = 0, last_rear = -1;
 
-void swap(Process * x, Process * y) {
-	Process temp = * x;
-	* x = * y;
-	* y = temp;
+void swap(Process * a, Process * b) {
+	Process temp = * a;
+	* a = * b;
+	* b = temp;
 }
 
 
